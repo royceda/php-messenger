@@ -9,7 +9,8 @@ if(isset($_POST['username']) AND $_POST['username'] == "charlie"){
 <?php
  }
 }else {
- echo 'incorrect password';
+  echo '<p> invalid password</p>';
+  include('login.php') ;
 }
 
  ?>
