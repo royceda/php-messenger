@@ -1,3 +1,9 @@
+<?php
+session_start();
+$_SESSION['username'] = $_COOKIE['username'];
+$_SESSION['image'] = "/upload"
+ ?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="eng" lang="eng">
 
@@ -11,8 +17,6 @@
 
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-
 </head>
 
 
@@ -23,7 +27,9 @@
                                 <a class="navbar-brand" href="#">
                                         <img alt="Brand" src="https://avatars3.githubusercontent.com/u/10850615?v=3&s=460" width="20%" height="20%">
                                 </a>
-                                <a class="navbar-brand">Walcome AAA</a>
+                                <?php
+                                echo '<a class="navbar-brand">'. $_SESSION['username'].'</a>';
+                                ?>
                         </div>
                 </div>
         </nav>
@@ -32,6 +38,7 @@
         <div class="container">
                 <div class="row">
                         <?php
+                        //while loop
                         ?>
                 <div class="col-sm-3 col-md-4">
                         <div class="thumbnail">
@@ -43,7 +50,7 @@
                                 </div>
                         </div>
                 </div>
-                
+
         </div>
 </div>
 
