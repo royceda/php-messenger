@@ -9,20 +9,26 @@
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+        <link rel="stylesheet" href="./style.css">
 </head>
 
+<div class="container">
+              <div class="row vertical-offset-100">
+                  <legend>Sign up!</legend>
+                  <form  enctype="multipart/form-data" action="signup.php" method="post"  >
+                    <input class="span3" name="name" placeholder="Full Name" type="text">
+                    <input class="span3" name="username" placeholder="Username" type="text">
+                    <input class="span3" name="password" placeholder="Password" type="password">
+                    <input type="file" name="myfile" class="filestyle" >
+                    <button class="btn btn-warning" type="submit">Sign up</button>
+                  </form>
+                </div>
+              </div>
+            
 
-<div class="span3 well">
-      <legend>Sign up!</legend>
-    <form method="post" accept-charset="UTF-8" action="signup.php" enctype="multipart/form-data" >
-		<input class="span3" name="name" placeholder="Full Name" type="text">
-        <input class="span3" name="username" placeholder="Username" type="text">
-        <input class="span3" name="password" placeholder="Password" type="password">
-        <input type="file" class="filestyle" name="myfile">
-        <button class="btn btn-warning" type="submit">Sign up</button>
-    </form>
-</div>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 </html>

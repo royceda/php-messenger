@@ -25,7 +25,7 @@ $_SESSION['image'] = "/upload"
                 <div class="container-fluid">
                         <div class="navbar-header">
                                 <a class="navbar-brand" href="#">
-                                        <img alt="Brand" src="https://avatars3.githubusercontent.com/u/10850615?v=3&s=460" width="20%" height="20%">
+                                        <img alt="Brand" src="https://avatars3.githubusercontent.com/u/10850615?v=3&s=460" width="100%" height="100%">
                                 </a>
                                 <?php
                                 echo '<a class="navbar-brand">'. $_SESSION['username'].'</a>';
