@@ -23,6 +23,7 @@
                                 <a class="navbar-brand" href="#">
                                         <img alt="Brand" src="https://avatars3.githubusercontent.com/u/10850615?v=3&s=460" width="20%" height="20%">
                                 </a>
+                                <a class="navbar-brand">Walcome AAA</a>
                         </div>
                 </div>
         </nav>
@@ -30,6 +31,8 @@
 
         <div class="container">
                 <div class="row">
+                        <?php
+                        ?>
                 <div class="col-sm-3 col-md-4">
                         <div class="thumbnail">
                                 <img src="https://scontent-cdg2-1.xx.fbcdn.net/hprofile-xta1/v/t1.0-1/p160x160/1928831_10153620257739724_1605897933318662058_n.jpg?oh=81e218f4f3043d17070ae703c264f7c7&oe=575C47E9" alt="...">
@@ -40,19 +43,10 @@
                                 </div>
                         </div>
                 </div>
-
-                <div class="col-sm-3 col-md-4">
-                        <div class="thumbnail">
-                                <img src="https://scontent-cdg2-1.xx.fbcdn.net/hprofile-xta1/v/t1.0-1/p160x160/1928831_10153620257739724_1605897933318662058_n.jpg?oh=81e218f4f3043d17070ae703c264f7c7&oe=575C47E9" alt="...">
-                                <div class="caption">
-                                        <h3>Linus Van Peep</h3>
-                                        <p>24/2/2015</p>
-                                        <p><a href="#" class="btn btn-primary" role="button">Profile</a> <a href="#" class="btn btn-default" role="button">Messages</a></p>
-                                </div>
-                        </div>
-                </div>
+                
         </div>
 </div>
+
 
 
 

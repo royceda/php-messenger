@@ -11,18 +11,25 @@
 
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
 </head>
 
 
-<div class="span3 well">
-      <legend>Sign up!</legend>
-    <form accept-charset="UTF-8" action="signup.php" method="post">
-		<input class="span3" name="name" placeholder="Full Name" type="text">
-        <input class="span3" name="username" placeholder="Username" type="text">
-        <input class="span3" name="password" placeholder="Password" type="password">
-        <input type="file" class="filestyle" name="file">
-        <button class="btn btn-warning" type="submit">Sign up</button>
-    </form>
-</div>
 
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="span4 well" style="padding-bottom:0">
+            <form accept-charset="UTF-8" action="" method="POST">
+                <textarea class="span4" id="new_message" name="new_message"
+                placeholder="Type in your message" rows="5"></textarea>
+                <h6 class="pull-right">320 characters remaining</h6>
+                <button class="btn btn-info" type="submit">Post New Message</button>
+            </form>
+        </div>
+	</div>
+</div>
 </html>
