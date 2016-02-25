@@ -16,11 +16,11 @@
 
 <div class="span3 well">
       <legend>Sign up!</legend>
-    <form accept-charset="UTF-8" action="signup.php" method="post">
+    <form method="post" accept-charset="UTF-8" action="signup.php" enctype="multipart/form-data" >
 		<input class="span3" name="name" placeholder="Full Name" type="text">
         <input class="span3" name="username" placeholder="Username" type="text">
         <input class="span3" name="password" placeholder="Password" type="password">
-        <input type="file" class="filestyle" name="file">
+        <input type="file" class="filestyle" name="myfile">
         <button class="btn btn-warning" type="submit">Sign up</button>
     </form>
 </div>
