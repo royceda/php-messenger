@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="eng" lang="eng">
 
 <head>
         <title>php-mess</title>
@@ -27,7 +27,7 @@
                                                 </div>
                                         </div>
                                         <div class="panel-body">
-                                                <form method="post" action="form.php" accept-charset="UTF-8" role="form" class="form-signin">
+                                                <form method="post" action="check.php" accept-charset="UTF-8" role="form" class="form-signin">
                                                         <fieldset>
                                                                 <label class="panel-login">
                                                                         <div class="login_result"></div>
@@ -36,6 +36,7 @@
                                                                 <input class="form-control" name="password" PlaceHolder="Password" id="password" type="password">
                                                                 <br></br>
                                                                 <input class="btn btn-lg btn-success btn-block" type="submit" id="login" value="Login »">
+                                                                <input class="btn btn btn-lg btn-default btn-block" action="form.php" name="signup" id="signup" type="submit" value="Sign up">
                                                         </fieldset>
                                                 </form>
                                         </div>
