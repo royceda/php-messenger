@@ -1,5 +1,7 @@
 <?php
 
+
+
 try{
 
 //echo htmlspecialchars($_POST['username']);
@@ -21,16 +23,16 @@ if (isset($_FILES['myfile']) AND $_FILES['myfile']['error'] == 0){
     //echo htmlspecialchars($_POST['username']);
     echo $path;
   }
- }
 }
+}
+$bdd = new PDO('mysql:host=localhost;dbname=messenger', 'root', '');
+//$req = $bdd->exec('INSERT INTO user(username, password, image) VALUES(\'royce\', \'aaa\', NULL)');
+$req = $bdd->prepare('INSERT INTO user(username, password, image) VALUES(:username, :password, :image)');
+$req -> execute(array('username' => $_POST['username'], 'password' => $_POST['password'], 'image' => $path));
 
+echo 'Ok !!!';
 
-
-
-$bdd = new PDO('mysql:host=localhost;dbname=messenger', 'root', 'aaaa');
-$req = $bdd->prepare('INSERT INTO user VALUES(username, password, image)');
-$req -> execute(array('user' => $_POST['user'], 'password' => $_POST['password'], 'image' => $path));
-
+header("location: ./login.php");
 
 }catch(Exception $e){
  die('Error: ' . $e->getMessage());

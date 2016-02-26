@@ -6,22 +6,19 @@ if(isset($_POST['signup']) AND $_POST['signup'] == "Sign up"){
 }
 
 
-if(isset($_POST['username']) AND $_POST['username'] == "charlie"){
-
-/*
+if(isset($_POST['username'])){
   try{
-    $bdd = new PDO('mysql:host=localhost;dbname=messenger', 'root', 'aaaa');
+    $bdd = new PDO('mysql:host=localhost;dbname=messenger', 'root', '');
     $req = $bdd->prepare('SELECT * FROM user WHERE username = ?');
     $req->execute(array($_POST['username']));
     $data = $req->fetch();
 
   }catch(Exception $e){
     die('Error: ' . $e->getMessage());
-  }*/
+  }
 
 
-
-  if(isset($_POST['password']) AND $_POST['password'] == "aaaa" /*$data['password']*/){
+  if(isset($_POST['password']) AND $_POST['password'] == $data['password']){
     ?>
     <h1> OKKKKKK !!! </h1>
 

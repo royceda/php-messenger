@@ -38,6 +38,12 @@ $_SESSION['image'] = "/upload"
         <div class="container">
                 <div class="row">
                         <?php
+                        $bdd = new PDO('mysql:host=localhost;dbname=messenger', 'root', '');
+                        $req = $bdd->prepare('SELECT * FROM user');
+                        $data = $req->fetch();
+
+
+
                         //while loop
                         ?>
                 <div class="col-sm-3 col-md-4">
