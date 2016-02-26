@@ -39,23 +39,38 @@ $_SESSION['image'] = "/upload"
                 <div class="row">
                         <?php
                         $bdd = new PDO('mysql:host=localhost;dbname=messenger', 'root', '');
-                        $req = $bdd->prepare('SELECT * FROM user');
-                        $data = $req->fetch();
-
+                        $req = $bdd->query('SELECT * FROM user');
+                        while($data = $req->fetch()){
+                                //print_r($data);
+                                //echo 'user : "' . $data['username'] . '  ';
 
 
                         //while loop
                         ?>
                 <div class="col-sm-3 col-md-4">
                         <div class="thumbnail">
-                                <img src="https://scontent-cdg2-1.xx.fbcdn.net/hprofile-xta1/v/t1.0-1/p160x160/1928831_10153620257739724_1605897933318662058_n.jpg?oh=81e218f4f3043d17070ae703c264f7c7&oe=575C47E9" alt="...">
-                                <div class="caption">
-                                        <h3>Charlie Brown</h3>
-                                        <p>...</p>
-                                        <p><a href="#" class="btn btn-primary" role="button">Profile</a> <a href="#" class="btn btn-default" role="button">Messages</a></p>
+                                <img style="width: 200px; height: 200px"
+                                <?php
+                                if($data['image']){
+                                        echo 'src=" ' . $data['image']. '"';
+                                }else {
+                                        echo 'src="https://scontent-cdg2-1.xx.fbcdn.net/hprofile-xta1/v/t1.0-1/p160x160/1928831_10153620257739724_1605897933318662058_n.jpg?oh=81e218f4f3043d17070ae703c264f7c7&oe=575C47E9"';
+                                }
+                                        ?>
+                                        alt="...">
+                                        <div class="caption">
+                                                <h3><?php echo $data['username']?></h3>
+                                                <p>...</p>
+                                                <p><a href="#" class="btn btn-primary" role="button">Profile</a> <a href="#" class="btn btn-default" role="button">Messages</a></p>
+                                        </div>
                                 </div>
                         </div>
-                </div>
+
+
+                <?php  
+        }
+
+                 ?>
 
         </div>
 </div>
