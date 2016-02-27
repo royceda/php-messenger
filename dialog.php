@@ -14,7 +14,7 @@ form
 
 
 <body>
-        <form action="minichat_post.php" method="post">
+        <form action="dialog_post.php" method="post">
                 <p>
                         <label for="pseudo">Pseudo</label> : <input type="text" name="username" id="username" /><br />
                         <label for="message">Message</label> : <input type="text" name="message" id="message" /><br />
@@ -25,20 +25,21 @@ form
 // Connexion à la base de données
 try
 {
-        $bdd = new PDO('mysql:host=localhost;dbname=messenger', 'root', 'aaaa');
+        $bdd = new PDO('mysql:host=localhost;dbname=messenger', 'root', '');
+        // last 10 messages
+        $response = $bdd->query('SELECT _from, message FROM messages ORDER BY _date DESC LIMIT 0, 10');
+        while ($data = $response->fetch())
+        {
+                echo '<p><strong>' . htmlspecialchars($data['_from']) . '</strong> : ' . htmlspecialchars($data['message']) . '</p>';
+        }
+        $response->closeCursor();
 }
 catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
 
-// last 10 messages
-$response = $bdd->query('SELECT username, message FROM messages ORDER BY ID DESC LIMIT 0, 10');
-while ($data = $reponse->fetch())
-{
-echo '<p><strong>' . htmlspecialchars($donnees['username']) . '</strong> : ' . htmlspecialchars($data['message']) . '</p>';
-}
-$response->closeCursor();
+
 ?>
 
 </body>

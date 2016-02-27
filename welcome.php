@@ -61,13 +61,14 @@ $_SESSION['image'] = "/upload"
                                         <div class="caption">
                                                 <h3><?php echo $data['username']?></h3>
                                                 <p>...</p>
-                                                <p><a href="#" class="btn btn-primary" role="button">Profile</a> <a href="#" class="btn btn-default" role="button">Messages</a></p>
+                                                <p><a href="#" class="btn btn-primary" role="button">Profile</a>
+                                                        <a href="dialog.php" class="btn btn-default" role="button">Messages</a></p>
                                         </div>
                                 </div>
                         </div>
 
 
-                <?php  
+                <?php
         }
 
                  ?>
